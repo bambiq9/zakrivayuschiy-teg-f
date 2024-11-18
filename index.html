@@ -1,19 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
+    <meta
+      name="description"
+      content="Что делать, когда не можешь делать ничего"
+    />
+    <meta property="og:title" content="Закрывающий тег" />
+    <meta property="og:url" content="https://closingtag.io/" />
+    <meta property="og:image" content="./images/og.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
+    <title>Закрывающий тег</title>
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
-    <header class="header">
+    <header class="header container">
+      <div class="header__logo">
+        <h1 class="header__title">&lt;/HTML&gt;</h1>
+        <h2 class="header__subtitle">закрывающий тег</h2>
+      </div>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -40,7 +56,19 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main class="content container">
+      <ul class="content__card-list">
+        <article class="card">
+          <h3 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+          <img class="card__image" src="./images/image.png">
+          <div class="card__text">
+            <p>На первых этапах мы работали со страхами и сомнениями, которые часто испытывают новички. Один из них — страх перед чистым листом. Это, конечно же, намного сложнее, чем боязнь куска бумаги. Часто за этим ощущением скрываются более глубокие вопросы: с чего начать? а вдруг будет слишком сложно? что, если я не справлюсь?</p>
+            <p>Место для ваших воспоминаний о начале первого спринта.</p>
+          </div>
+          <button>Like</button>
+        </article>
+      </ul>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
