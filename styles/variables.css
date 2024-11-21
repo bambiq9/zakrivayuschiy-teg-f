@@ -15,5 +15,8 @@
     linear-gradient(#e7e7e7, #1a1a1a);
 
   --theme-btn-hover-color: rgba(0 0 0 / 0.6);
+  
+  --border-width: 2px;
+  --main-border: var(--border-width) solid var(--accent-color);
   ;
 }
