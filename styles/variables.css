@@ -11,17 +11,11 @@
 
   --accent-color: #000;
   --bg-color: #fff;
-  --bg-image: 
-    repeating-linear-gradient(to right, #d3d3d3 2px, transparent 4px),
+  --bg-image: repeating-linear-gradient(to right, #d3d3d3 2px, transparent 4px),
     repeating-linear-gradient(#d3d3d3 2px, transparent 4px),
     linear-gradient(#e7e7e7, #1a1a1a);
-  --label-text-shadow: 
-    -1px -1px 0 var(--bg-color),  
-    1px -1px 0 var(--bg-color),
-    -1px 1px 0 var(--bg-color),
-    1px 1px 0 var(--bg-color);
-
-  --theme-btn-hover-color: rgba(0 0 0 / 0.6);
+  --label-text-shadow: -1px -1px 0 var(--bg-color), 1px -1px 0 var(--bg-color),
+    -1px 1px 0 var(--bg-color), 1px 1px 0 var(--bg-color);
 
   --border-width: 2px;
   --main-border: var(--border-width) solid var(--accent-color);

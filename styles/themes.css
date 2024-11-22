@@ -15,34 +15,23 @@
     repeating-linear-gradient(#000 2px, transparent 4px),
     linear-gradient(#007f0c, #004306);
   --bg-color: #000;
-  --label-text-shadow: 
-    -1px -1px 0 var(--bg-color),  
-    1px -1px 0 var(--bg-color),
-    -1px 1px 0 var(--bg-color),
-    1px 1px 0 var(--bg-color);
-
-  --theme-btn-hover-color: rgba(0 204 20 / 0.6);
+  --label-text-shadow: -1px -1px 0 var(--bg-color), 1px -1px 0 var(--bg-color),
+    -1px 1px 0 var(--bg-color), 1px 1px 0 var(--bg-color);
 }
 
 @media (prefers-color-scheme: dark) {
-
+  
   :root {
     --card-title-weight: 785;
     --card-text-weight: 465;
 
     --accent-color: #00cc14;
-    --bg-image: 
-    repeating-linear-gradient(to right, #000 2px, transparent 4px),
-    repeating-linear-gradient(#000 2px, transparent 4px),
-    linear-gradient(#007f0c, #004306);
+    --bg-image: repeating-linear-gradient(to right, #000 2px, transparent 4px),
+      repeating-linear-gradient(#000 2px, transparent 4px),
+      linear-gradient(#007f0c, #004306);
     --bg-color: #000;
-    --label-text-shadow: 
-      -1px -1px 0 var(--bg-color),  
-      1px -1px 0 var(--bg-color),
-      -1px 1px 0 var(--bg-color),
-      1px 1px 0 var(--bg-color);
-
-    --theme-btn-hover-color: rgba(0 204 20 / 0.6);
+    --label-text-shadow: -1px -1px 0 var(--bg-color), 1px -1px 0 var(--bg-color),
+      -1px 1px 0 var(--bg-color), 1px 1px 0 var(--bg-color);
   }
 }
 
@@ -51,11 +40,8 @@
   --card-text-weight: 400;
 
   --accent-color: #000;
-  --bg-image: 
-    repeating-linear-gradient(to right, #d3d3d3 2px, transparent 4px),
+  --bg-image: repeating-linear-gradient(to right, #d3d3d3 2px, transparent 4px),
     repeating-linear-gradient(#d3d3d3 2px, transparent 4px),
     linear-gradient(#e7e7e7, #1a1a1a);
   --bg-color: #fff;
-
-  --theme-btn-hover-color: rgba(0 0 0 / 0.6);
 }

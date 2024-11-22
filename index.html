@@ -58,42 +58,65 @@
     </header>
     <main class="content container">
       <ul class="content__card-list">
-        <article class="card">
-          <h3 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h3>
-          <div class="card__cover">
-            <span class="card__image-label">&lt;/HTML&gt;</span>
-            <img class="card__image" src="./images/image.png">
-          </div>
-          <div class="card__content">
-            <div class="card__text">
-              <p>Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
-              <p>Место для ваших воспоминаний о начале обучения.</p>
+        <li>
+          <article class="card">
+            <h3 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+            <div class="card__cover">
+              <span class="card__image-label">&lt;/HTML&gt;</span>
+              <img class="card__image" src="./images/image.png">
             </div>
-            <div class="card__controls">
-              <button class="card__icon-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none"><path fill="#000" d="M12 6H9v3h3V6ZM15 6h-3v3h3V6ZM9 9H6v3h3V9ZM9 12H6v3h3v-3ZM9 15H6v3h3v-3ZM18 6h-3v3h3V6ZM12 18H9v3h3v-3ZM15 21h-3v3h3v-3ZM18 24h-3v3h3v-3ZM27 6h3v3h-3V6ZM24 6h3v3h-3V6ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM21 6h3v3h-3V6ZM27 18h3v3h-3v-3ZM24 21h3v3h-3v-3ZM21 24h3v3h-3v-3ZM21 9h-3v3h3V9ZM21 27h-3v3h3v-3Z"/></svg>
-              </button>
-              <button class="card__like-button"><span class="button__text">Like</span></button>
+            <div class="card__content">
+              <div class="card__text">
+                <p>Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
+                <p>Место для ваших воспоминаний о начале обучения.</p>
+              </div>
+              <div class="card__controls">
+                <button class="card__icon-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none"><path fill="#000" d="M12 6H9v3h3V6ZM15 6h-3v3h3V6ZM9 9H6v3h3V9ZM9 12H6v3h3v-3ZM9 15H6v3h3v-3ZM18 6h-3v3h3V6ZM12 18H9v3h3v-3ZM15 21h-3v3h3v-3ZM18 24h-3v3h3v-3ZM27 6h3v3h-3V6ZM24 6h3v3h-3V6ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM21 6h3v3h-3V6ZM27 18h3v3h-3v-3ZM24 21h3v3h-3v-3ZM21 24h3v3h-3v-3ZM21 9h-3v3h3V9ZM21 27h-3v3h3v-3Z"/></svg>
+                </button>
+                <button class="button card__like-button"><span class="button__text">Like</span></button>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </li>
       </ul>
     </main>
     <footer class="footer">
-      <button class="footer__button">
-        <div class="footer__icon-button">
+      <button 
+        class="button footer__button"
+        type="button" 
+        onclick="window['modal'].showModal()" 
+        aria-controls="modal"
+      >
+        <svg 
+          class="footer__icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 39 39"
+          stroke="currentColor"
+          width="39"
+          height="39"
+        >
+            <use href="./svg/floppy.svg#floppy">
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+    </footer>
+    <dialog class="modal" id="modal">
+      <div class="modal__description">
+        <div class="modal__icon-container">
           <svg 
-            class="footer__icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 39 39"
-            width="39"
-            height="39">
+          class="modal__icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 39 39"
+          width="39"
+          height="39">
             <use href="./svg/floppy.svg#floppy">
           </svg>
         </div>
-        <span class="button-text">Сохранить на память</span>
-      </button>
-    </footer>
+        <p>Вставьте дискету, чтобы продолжить</p>
+      </div>
+      <button class="button modal__button">ok</button>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
