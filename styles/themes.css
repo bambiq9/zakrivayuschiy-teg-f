@@ -17,6 +17,8 @@
   --bg-color: #000;
   --label-text-shadow: -1px -1px 0 var(--bg-color), 1px -1px 0 var(--bg-color),
     -1px 1px 0 var(--bg-color), 1px 1px 0 var(--bg-color);
+
+  --btn-text-blend-color: var(--accent-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,6 +34,8 @@
     --bg-color: #000;
     --label-text-shadow: -1px -1px 0 var(--bg-color), 1px -1px 0 var(--bg-color),
       -1px 1px 0 var(--bg-color), 1px 1px 0 var(--bg-color);
+
+    --btn-text-blend-color: var(--accent-color);
   }
 }
 
@@ -44,4 +48,6 @@
     repeating-linear-gradient(#d3d3d3 2px, transparent 4px),
     linear-gradient(#e7e7e7, #1a1a1a);
   --bg-color: #fff;
+
+  --btn-text-blend-color: var(--bg-color);
 }

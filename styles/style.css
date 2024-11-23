@@ -204,7 +204,114 @@ button {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 5px;
 }
+
+.card__icon-button {
+  padding: 1px;
+  cursor: pointer;
+  outline: var(--border-width) solid rgba(255 255 255 / 0);
+}
+
+.card__icon-button:focus-visible {
+  outline: var(--main-border);
+  transition: outline .3s ease;
+}
+
+/* HEART ANIMATION */
+
+.like-icon {
+  max-block-size: 31px;
+  max-inline-size: 34px;
+}
+
+.heart-stroke {
+  fill: var(--accent-color);
+  transition: fill 0.1s;
+}
+
+.heart-core {
+  fill: var(--bg-color);
+  transition: fill 0.3s 0.03s;
+}
+
+.card__icon-button:hover .heart-core {
+  fill: var(--accent-color);
+  transition: fill 0.3s;
+}
+
+.heart-body {
+  fill: var(--bg-color);
+  transition: fill 0.3s;
+}
+
+.card__icon-button:hover .heart-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s 0.05s;
+}
+
+.card__icon-button:active .heart-core {
+  fill: var(--heart-fill);
+  transition: fill 0.3s;
+}
+
+.card__icon-button:active .heart-body {
+  fill: var(--heart-fill);
+  transition: fill 0.3s 0.05s;
+}
+
+.heart-sparks {
+  opacity: 0;
+}
+
+.like-icon.is-liked .heart-core {
+  fill: var(--heart-fill);
+  transition: fill 0.3s;
+}
+
+.like-icon.is-liked .heart-body {
+  fill: var(--heart-fill);
+  transition: fill 0.3s 0.05s;
+}
+
+.like-icon.is-liked .heart-stroke {
+  fill: var(--heart-fill);
+  transition: fill 0.3s 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: heart-pump 0.3s ease-in 0.1s alternate;
+  transition: animation 0.3s 0.06s;
+}
+
+.like-icon.is-liked .heart-sparks {
+  animation: heart-sparks 0.3s ease-in 0.3s alternate;
+}
+
+@keyframes heart-pump {
+  
+  from {
+    transform: scale(1);
+  } 
+  
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes heart-sparks {
+  
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* HEART ANIMATION END */
 
 .button {
   position: relative;
@@ -237,7 +344,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-inline: 35px;
+  inline-size: 130px;
   padding-block: 12.5px;
   line-height: 0.6;
 }
@@ -264,7 +371,7 @@ button {
 }
 
 .button__text {
-  color: var(--bg-color);
+  color: var(--btn-text-blend-color);
   max-inline-size: 266px;
   white-space: nowrap;
   mix-blend-mode: difference;
@@ -274,7 +381,7 @@ button {
   max-inline-size: 21px;
   max-block-size: 21px;
   mix-blend-mode: difference;
-  color: var(--bg-color)
+  color: var(--btn-text-blend-color);
 }
 
 @media screen and (max-width <= 375px) {
@@ -306,7 +413,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  opacity: 0.5;
 }
 
 .modal::backdrop {
@@ -316,7 +422,7 @@ button {
 .modal__description {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
 }
 
 .modal__icon-container {
@@ -325,11 +431,15 @@ button {
 }
 
 .modal__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: var(--main-border);
   padding-block: 10px;
   line-height: initial;
   text-align: center;
   text-transform: uppercase;
+  
 }
 
 @supports((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color))) {
