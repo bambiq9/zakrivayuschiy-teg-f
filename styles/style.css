@@ -185,7 +185,7 @@ button {
 .card__image {
   display: block;
   object-fit: cover;
-  object-position: right;
+  object-position: 96%;
   inline-size: 100%;
   aspect-ratio: 1 / 1;
 }
