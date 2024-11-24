@@ -79,9 +79,9 @@
 }
 
 .like-icon.is-liked .heart {
+  transition: animation 0.3s 0.06s;
   transform-origin: center;
   animation: heart-pump 0.3s ease-in 0.1s alternate;
-  transition: animation 0.3s 0.06s;
 }
 
 .like-icon.is-liked .heart-sparks {
