@@ -38,12 +38,12 @@ button {
 }
 
 .container {
-  border: var(--main-border);
-  background-color: var(--bg-color);
   inline-size: clamp(375px, 100%, 700px);
 }
 
 .header {
+  border: var(--main-border);
+  background-color: var(--bg-color);
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   justify-items: center;
@@ -146,20 +146,33 @@ button {
   margin-block-end: 50px;
 }
 
-.card__list {
+.content__card-list {
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
 
+.card {
+  background-color: var(--bg-color);
+  border: var(--main-border);
+}
+
 .card__title {
   border-block-end: var(--main-border);
   padding-inline: 10px;
-  padding-block-start: 5px;
-  padding-block-end: 3px;
+  padding-block: 3px;
   font-size: var(--main-font-size);
-  line-height: 1.22;
+  line-height: 1.38;
   font-variation-settings: 'wght' var(--card-title-weight);
+}
+
+@media screen and (width <= 375px) {
+
+  .card__title {
+    padding-block-start: 5px;
+    padding-block-end: 3px;
+    line-height: 1.22;
+  }
 }
 
 .card__cover {
@@ -185,6 +198,34 @@ button {
   aspect-ratio: 1 / 1;
 }
 
+li:nth-child(2) .card__image {
+  filter: saturate(30%) brightness(1.2) contrast(0.9);
+}
+
+li:nth-child(3) .card__image {
+  filter: saturate(400%);
+}
+
+li:nth-child(4) .card__image {
+  filter: hue-rotate(30deg);
+}
+
+li:nth-child(5) .card__image {
+  filter: invert() contrast(60%);
+}
+
+li:nth-child(6) .card__image {
+  filter: sepia(90%);
+}
+
+li:nth-child(7) .card__image {
+  filter: blur(10px);
+}
+
+li:nth-child(8) .card__image {
+  filter: hue-rotate(90deg) blur(2px) brightness(120%) contrast(50%) ;
+}
+
 .card__content {
   border-block-start: var(--main-border);
   padding-inline: 25px;
@@ -196,7 +237,7 @@ button {
   flex-direction: column;
   gap: 27px;
   padding-block: 25px;
-  line-height: 1.17;
+  line-height: 1.175;
   font-variation-settings: var(--card-text-weight);
 }
 
@@ -353,6 +394,7 @@ button {
   display: flex;
   justify-content: center;
   inline-size: 100%;
+  margin-block-end: 100px;
 }
 
 .footer__button {
@@ -378,13 +420,13 @@ button {
 }
 
 .footer__icon {
-  max-inline-size: 21px;
-  max-block-size: 21px;
+  max-inline-size: 28px;
+  max-block-size: 28px;
   mix-blend-mode: difference;
   color: var(--btn-text-blend-color);
 }
 
-@media screen and (max-width <= 375px) {
+@media screen and (width <= 375px) {
 
   .footer__icon {
     margin-bottom: 8px;
