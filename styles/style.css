@@ -1,3 +1,4 @@
+/* stylelint-disable no-unknown-animations */
 /* Здесь вы напишете основную часть стилей страницы.
 
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
@@ -42,15 +43,15 @@ button {
 }
 
 .header {
-  border: var(--main-border);
-  background-color: var(--bg-color);
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   justify-items: center;
   gap: 25px;
   margin-block-end: 100px;
+  border: var(--main-border);
   font-family: 'PressStart2P';
   text-transform: uppercase;
+  background-color: var(--bg-color);
   block-size: clamp(327px, 49dvb, 368px);
 }
 
@@ -92,7 +93,7 @@ button {
 }
 
 .theme-menu__button::after {
-  content: "";
+  content: '';
   position: relative;
   display: block;
   width: 100%;
@@ -114,18 +115,6 @@ button {
   position: absolute;
   animation: arrow 0.5s ease-in-out alternate infinite;
   inset-inline-start: -0.8rem;
-}
-
-@keyframes arrow {
-
-  from {
-    inset-inline-start: -0.8rem;
-  }
-
-  to {
-    inset-inline-start: -1.05rem;
-  }
-  
 }
 
 .theme-menu__button:focus-visible:after {
@@ -153,8 +142,8 @@ button {
 }
 
 .card {
-  background-color: var(--bg-color);
   border: var(--main-border);
+  background-color: var(--bg-color);
 }
 
 .card__title {
@@ -177,16 +166,18 @@ button {
 
 .card__cover {
   position: relative;
+  overflow: hidden;
 }
 
 .card__image-label {
   position: absolute;
+  z-index: 1;
   opacity: 0.5;
   font-family: var(--accent-font);
   font-size: var(--accent-font-size);
   text-shadow: var(--label-text-shadow);
   inset-block-start: 25px;
-  inset-inline-end: clamp(0.8125rem, 0.5484rem + 1.1268vw, 1.5625rem);;
+  inset-inline-end: clamp(0.8125rem, 0.5484rem + 1.1268vw, 1.5625rem);
   mix-blend-mode: hard-light;
 }
 
@@ -219,11 +210,11 @@ li:nth-child(6) .card__image {
 }
 
 li:nth-child(7) .card__image {
-  filter: blur(10px);
+  filter: blur(20px);
 }
 
 li:nth-child(8) .card__image {
-  filter: hue-rotate(90deg) blur(2px) brightness(120%) contrast(50%) ;
+  filter: hue-rotate(90deg) blur(2px) brightness(120%) contrast(50%);
 }
 
 .card__content {
@@ -250,109 +241,19 @@ li:nth-child(8) .card__image {
 
 .card__icon-button {
   padding: 1px;
-  cursor: pointer;
   outline: var(--border-width) solid rgba(255 255 255 / 0);
+  cursor: pointer;
 }
 
 .card__icon-button:focus-visible {
   outline: var(--main-border);
-  transition: outline .3s ease;
+  transition: outline 0.3s ease;
 }
-
-/* HEART ANIMATION */
 
 .like-icon {
   max-block-size: 31px;
   max-inline-size: 34px;
 }
-
-.heart-stroke {
-  fill: var(--accent-color);
-  transition: fill 0.1s;
-}
-
-.heart-core {
-  fill: var(--bg-color);
-  transition: fill 0.3s 0.03s;
-}
-
-.card__icon-button:hover .heart-core {
-  fill: var(--accent-color);
-  transition: fill 0.3s;
-}
-
-.heart-body {
-  fill: var(--bg-color);
-  transition: fill 0.3s;
-}
-
-.card__icon-button:hover .heart-body {
-  fill: var(--accent-color);
-  transition: fill 0.3s 0.05s;
-}
-
-.card__icon-button:active .heart-core {
-  fill: var(--heart-fill);
-  transition: fill 0.3s;
-}
-
-.card__icon-button:active .heart-body {
-  fill: var(--heart-fill);
-  transition: fill 0.3s 0.05s;
-}
-
-.heart-sparks {
-  opacity: 0;
-}
-
-.like-icon.is-liked .heart-core {
-  fill: var(--heart-fill);
-  transition: fill 0.3s;
-}
-
-.like-icon.is-liked .heart-body {
-  fill: var(--heart-fill);
-  transition: fill 0.3s 0.05s;
-}
-
-.like-icon.is-liked .heart-stroke {
-  fill: var(--heart-fill);
-  transition: fill 0.3s 0.06s;
-}
-
-.like-icon.is-liked .heart {
-  transform-origin: center;
-  animation: heart-pump 0.3s ease-in 0.1s alternate;
-  transition: animation 0.3s 0.06s;
-}
-
-.like-icon.is-liked .heart-sparks {
-  animation: heart-sparks 0.3s ease-in 0.3s alternate;
-}
-
-@keyframes heart-pump {
-  
-  from {
-    transform: scale(1);
-  } 
-  
-  to {
-    transform: scale(1.5);
-  }
-}
-
-@keyframes heart-sparks {
-  
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-/* HEART ANIMATION END */
 
 .button {
   position: relative;
@@ -368,7 +269,7 @@ li:nth-child(8) .card__image {
 }
 
 .button::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 100%;
@@ -385,16 +286,16 @@ li:nth-child(8) .card__image {
   display: flex;
   justify-content: center;
   align-items: center;
-  inline-size: 130px;
   padding-block: 12.5px;
   line-height: 0.6;
+  inline-size: 130px;
 }
 
 .footer {
   display: flex;
   justify-content: center;
-  inline-size: 100%;
   margin-block-end: 100px;
+  inline-size: 100%;
 }
 
 .footer__button {
@@ -412,28 +313,26 @@ li:nth-child(8) .card__image {
   max-inline-size: 335px;
 }
 
+.footer__icon {
+  color: var(--btn-text-blend-color);
+  block-size: 21px;
+  inline-size: 21px;
+  mix-blend-mode: difference;
+}
+
+@media screen and (width < 490px) {
+
+  .footer__icon {
+    block-size: 28px;
+    inline-size: 28px;
+  }
+}
+
 .button__text {
   color: var(--btn-text-blend-color);
   max-inline-size: 266px;
   white-space: nowrap;
   mix-blend-mode: difference;
-}
-
-.footer__icon {
-  max-inline-size: 28px;
-  max-block-size: 28px;
-  mix-blend-mode: difference;
-  color: var(--btn-text-blend-color);
-}
-
-@media screen and (width <= 375px) {
-
-  .footer__icon {
-    margin-bottom: 8px;
-    color: currentColor;
-    max-inline-size: 28px;
-    max-block-size: 28px;
-  }
 }
 
 .modal {
@@ -472,24 +371,30 @@ li:nth-child(8) .card__image {
   block-size: 39px;
 }
 
+.modal__icon {
+  color: var(--btn-text-blend-color);
+}
+
 .modal__button {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   border: var(--main-border);
   padding-block: 10px;
   line-height: initial;
   text-align: center;
   text-transform: uppercase;
-  
 }
 
-@supports((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color))) {
+@supports (
+  (text-stroke: 1px var(--bg-color)) or
+    (-webkit-text-stroke: 1px var(--bg-color))
+) {
 
   .card__image-label {
-      text-shadow: none;
-      -webkit-text-stroke: 1px var(--bg-color);
-      /* stylelint-disable-next-line property-no-unknown */
-      text-stroke: 1px var(--bg-color);
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--bg-color);
+    /* stylelint-disable-next-line property-no-unknown */
+    text-stroke: 1px var(--bg-color);
   }
-};
+}

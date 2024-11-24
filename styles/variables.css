@@ -17,9 +17,9 @@
   --label-text-shadow: -1px -1px 0 var(--bg-color), 1px -1px 0 var(--bg-color),
     -1px 1px 0 var(--bg-color), 1px 1px 0 var(--bg-color);
   --btn-text-blend-color: var(--bg-color);
-  
+
   --border-width: 2px;
   --main-border: var(--border-width) solid var(--accent-color);
 
-  --heart-fill: #F00;
+  --heart-fill: #f00;
 }
