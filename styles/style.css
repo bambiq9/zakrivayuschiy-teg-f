@@ -23,17 +23,14 @@
   margin-block-start: 100px;
   color: var(--accent-color, #000);
   font-family: var(--main-font, sans-serif);
-  font-size: var(--main-font-size, 1.125rem); 
-
+  font-size: var(--main-font-size, 1.125rem);
   background: var(--bg-color, #fff) fixed;
-  background-image: var(--bg-image, 
-    repeating-linear-gradient(
-      to right,
-      #d3d3d3 0 2px,
-      transparent 2px 4px
-    ),
+  background-image: var(
+    --bg-image,
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a));
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a)
+  );
   background-size: cover;
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -189,9 +186,13 @@ button {
   opacity: 0.5;
   font-family: var(--accent-font, PressStart2P), fantasy;
   font-size: var(--accent-font-size, 0.875rem);
-  text-shadow: var(--label-text-shadow, 
-    -1px -1px 0 #fff, 1px -1px 0 #fff,
-    -1px 1px 0 #fff, 1px 1px 0 #fff);
+  text-shadow: var(
+    --label-text-shadow,
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff
+  );
   inset-block-start: 25px;
   inset-inline-end: clamp(0.8125rem, 0.5484rem + 1.1268vw, 1.5625rem);
   mix-blend-mode: hard-light;
@@ -424,4 +425,3 @@ button {
   text-transform: uppercase;
   inline-size: inherit;
 }
-
